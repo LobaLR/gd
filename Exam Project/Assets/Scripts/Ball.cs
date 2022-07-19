@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public Vector3 initialVelocity;
+    
     public ParticleSystem trail;
     public Score score;
     public GameObject bonusPrefab;
@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         ballRb = GetComponent<Rigidbody>();
-        ballRb.velocity = initialVelocity;
+        ballRb.velocity = new Vector3(0, Random.Range(-100, 100), 0);
         audioSource = GetComponent<AudioSource>();
     }
 
